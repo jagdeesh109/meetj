@@ -52,8 +52,8 @@ public class MyResource {
     @Path("/events")
     public JSONObject getEvent() {
     	
-    	// meetup API key for user jagdeesh  "6b6e2a571e116213e6424331d206d76"
-    	String MeetupAPIKey = "6b6e2a571e116213e6424331d206d76";
+    	// meetup API key for user jagdeesh  "*****";
+    	String MeetupAPIKey = "****";
     	
     	JSONObject jsonObject = new JSONObject();
     	
@@ -63,7 +63,7 @@ public class MyResource {
     	ClientConfig clientConfig = new DefaultClientConfig();
     	clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
     	Client client = Client.create(clientConfig);
-    	WebResource resource = client.resource("https://api.meetup.com/great-hyderabad-adventure-club?key=6b6e2a571e116213e6424331d206d76"); 
+    	WebResource resource = client.resource("https://api.meetup.com/great-hyderabad-adventure-club?key=*****"); 
     	ClientResponse response = resource.accept("application/json").get(ClientResponse.class);
     	
     	if (response.getStatus() != 200 ) {
